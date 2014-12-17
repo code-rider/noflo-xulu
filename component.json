@@ -7,7 +7,7 @@
     "email": "code.rider@hotmail.com"
   },
   "dependencies": {
-    "noflo/noflo": "*",
+    "noflo/noflo": "*"
   },
   "scripts": [
     "components/Alert.coffee",
