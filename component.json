@@ -1,13 +1,13 @@
 {
   "name": "noflo-xulu",
   "description": "custom components",
+  "repo": "code-rider/noflo-xulu",
   "author": {
     "name": "Rashid",
-    "email": "example@example.com"
+    "email": "code.rider@hotmail.com"
   },
-  "version": "1.0.0",
   "dependencies": {
-    "noflo": "0.5.x",
+    "noflo": "0.5.x"
   },
   "scripts": [
     "components/Alert.coffee",
