@@ -1,10 +1,9 @@
 {
   "name": "noflo-xulu",
   "description": "custom components",
-  "repo": "code-rider/noflo-xulu",
   "author": {
     "name": "Rashid",
-    "email": "code.rider@hotmail.com"
+    "email": "example@example.com"
   },
   "version": "1.0.0",
   "dependencies": {
