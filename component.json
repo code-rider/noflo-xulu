@@ -1,0 +1,25 @@
+{
+  "name": "noflo-xulu",
+  "description": "custom components",
+  "repo": "code-rider/noflo-xulu",
+  "author": {
+    "name": "Rashid",
+    "email": "code.rider@hotmail.com"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "noflo": "0.5.x",
+  },
+  "scripts": [
+    "components/Alert.coffee",
+    "index.js"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "components": {
+      "Alert": "components/Alert.coffee"
+    }
+  }
+}
