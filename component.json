@@ -7,7 +7,9 @@
     "email": "code.rider@hotmail.com"
   },
   "dependencies": {
-    "noflo/noflo": "*"
+    "noflo/noflo": "*",
+	"fs.extra": "1.2.x",
+    "mimetype": "0.0.5"
   },
   "scripts": [
     "components/Alert.coffee",
