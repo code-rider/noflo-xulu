@@ -21,7 +21,7 @@
   ],
   "noflo": {
     "components": {
-      "Alert": "components/Alert.coffee"
+      "Alert": "components/Alert.coffee",
       "ReadFile": "components/ReadFile.coffee"
     }
   }
