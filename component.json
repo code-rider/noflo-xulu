@@ -11,7 +11,7 @@
   },
   "scripts": [
     "components/Alert.coffee",
-	"components/ReadFile.coffee",
+    "components/ReadFile.coffee",
     "index.js"
   ],
   "json": [
