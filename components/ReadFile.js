@@ -8,7 +8,7 @@ exports.getComponent = function () {
     if (event !== 'data') {
       return;
     }
-	var alltext = function readTextFile(file){	  
+	function readTextFile(file){	  
       var rawFile = new XMLHttpRequest();
       rawFile.open("GET", file, false);
       rawFile.onreadystatechange = function () {
@@ -22,7 +22,7 @@ exports.getComponent = function () {
       rawFile.send(null);
     }
     // Do something with the packet, then
-    c.outPorts.out.send(alltext("text.txt"));
+    c.outPorts.out.send(readTextFile("text.txt"));
   });
   c.outPorts.add('out');
   return c;
