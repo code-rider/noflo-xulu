@@ -11,7 +11,7 @@
   },
   "scripts": [
     "components/Alert.coffee",
-    "components/ReadFile.coffee",
+    "components/ReadFile.js",
     "index.js"
   ],
   "json": [
@@ -20,7 +20,7 @@
   "noflo": {
     "components": {
       "Alert": "components/Alert.coffee",
-      "ReadFile": "components/ReadFile.coffee"
+      "ReadFile": "components/ReadFile.js"
     }
   }
 }
