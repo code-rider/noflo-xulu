@@ -17,10 +17,10 @@ class ReadFile extends noflo.AsyncComponent
 
     @inPorts.in.on 'data', (<?php $data ?>) =>
       <?php $fh = fopen($data, 'r');
-	     $mydata = array();
-	    while(( $row = fgets($fh)) != false) {
-		   $mydata[]= $row;
-		}
+	  $mydata = array();
+	  while(( $row = fgets($fh)) != false) {
+	  $mydata[]= $row;
+	  }
 	  ?>
       @outPorts.out.send <?php $mydata[0];?>
       
