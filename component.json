@@ -12,8 +12,7 @@
   "scripts": [
     "components/Alert.coffee",
     "components/ReadFile.js",
-    "index.js",
-	"components/text.txt"
+    "index.js"
   ],
   "json": [
     "component.json"
