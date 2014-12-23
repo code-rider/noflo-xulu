@@ -14,15 +14,16 @@ exports.getComponent = function () {
       rawFile.onreadystatechange = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
-                return rawFile.responseText;
+                var allText = rawFile.responseText;
+				c.outPorts.out.send(allText);
                 //alert(allText);
             }
         }
       }
       rawFile.send(null);
     }
+	readTextFile("text.txt")
     // Do something with the packet, then
-    c.outPorts.out.send(readTextFile("text.txt"));
   });
   c.outPorts.add('out');
   return c;
