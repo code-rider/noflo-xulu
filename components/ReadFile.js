@@ -14,7 +14,7 @@ exports.getComponent = function () {
       rawFile.onreadystatechange = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
-				var content = utf8_encode(String(rawFile.responseText));
+                var content = utf8_encode(String(rawFile.responseText));
                 var allText = content.split("\n");
                 c.outPorts.out.send(allText);
                 c.outPorts.out.disconnect();
