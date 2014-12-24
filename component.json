@@ -11,9 +11,9 @@
   },
   "scripts": [
     "components/Alert.coffee",
-	"components/Array_to_packet.coffee",
-	"components/PacketCounter.coffee",
-	"components/SplitStr.coffee",
+    "components/Array_to_packet.coffee",
+    "components/PacketCounter.coffee",
+    "components/SplitStr.coffee",
     "components/ReadFile.js",
     "index.js"
   ],
@@ -23,9 +23,9 @@
   "noflo": {
     "components": {
       "Alert": "components/Alert.coffee",
-	  "Array_to_packet": "components/Array_to_packet.coffee",
-	  "PacketCounter": "components/PacketCounter.coffee",
-	  "SplitStr": "components/SplitStr.coffee",
+      "Array_to_packet": "components/Array_to_packet.coffee",
+      "PacketCounter": "components/PacketCounter.coffee",
+      "SplitStr": "components/SplitStr.coffee",
       "ReadFile": "components/ReadFile.js"
     }
   }
