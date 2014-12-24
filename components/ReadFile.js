@@ -15,10 +15,7 @@ exports.getComponent = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
                 var allText = rawFile.responseText.split("\n");
-                allText.forEach(function(line) {
-                  c.outPorts.out.send(line);
-                });
-                //alert(allText);
+				c.outPorts.out.send(allText);
             }
         }
       }
