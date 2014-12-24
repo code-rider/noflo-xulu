@@ -14,7 +14,8 @@ exports.getComponent = function () {
       rawFile.onreadystatechange = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
-                var allText = rawFile.responseText.split("\n");
+				var content = unescape(encodeURIComponent(rawFile.responseText));
+                var allText = content.split("\n");
                 c.outPorts.out.send(allText);
                 c.outPorts.out.disconnect();
             }
