@@ -15,8 +15,8 @@
     "components/PacketCounter.coffee",
     "components/SplitStr.coffee",
     "components/ReadFile.js",
-	"components/tweets_date_filter.js",
-	"components/tweets_uid_filter.js",
+    "components/tweets_date_filter.js",
+    "components/tweets_uid_filter.js",
     "index.js"
   ],
   "json": [
@@ -29,7 +29,7 @@
       "PacketCounter": "components/PacketCounter.coffee",
       "SplitStr": "components/SplitStr.coffee",
       "ReadFile": "components/ReadFile.js",
-	  "tweets_date_filter": "components/tweets_date_filter.coffee",
+      "tweets_date_filter": "components/tweets_date_filter.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.js"
     }
   }
