@@ -17,6 +17,7 @@
     "components/ReadFile.js",
     "components/tweets_date_filter.coffee",
     "components/tweets_uid_filter.coffee",
+    "components/tweets_get_hashTags.coffee",
     "index.js"
   ],
   "json": [
@@ -30,6 +31,7 @@
       "SplitStr": "components/SplitStr.coffee",
       "ReadFile": "components/ReadFile.js",
       "tweets_date_filter": "components/tweets_date_filter.coffee",
+      "tweets_get_hashTags": "components/tweets_get_hashTags.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
