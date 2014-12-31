@@ -36,7 +36,7 @@
       "ReadDirectory": "components/directory_reader.js",
       "tweets_date_filter": "components/tweets_date_filter.coffee",
       "tweets_get_hashTags": "components/tweets_get_hashTags.coffee",
-	  "tweets_filter_followers": "components/tweets_filter_followers.coffee",
+      "tweets_filter_followers": "components/tweets_filter_followers.coffee",
       "tweets_filter_friends": "components/tweets_filter_friends.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
