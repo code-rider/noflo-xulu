@@ -15,9 +15,12 @@
     "components/PacketCounter.coffee",
     "components/SplitStr.coffee",
     "components/ReadFile.js",
+    "components/directory_reader.js",
     "components/tweets_date_filter.coffee",
     "components/tweets_uid_filter.coffee",
     "components/tweets_get_hashTags.coffee",
+    "components/tweets_filter_followers.coffee",
+    "components/tweets_filter_friends.coffee",
     "index.js"
   ],
   "json": [
@@ -30,8 +33,11 @@
       "PacketCounter": "components/PacketCounter.coffee",
       "SplitStr": "components/SplitStr.coffee",
       "ReadFile": "components/ReadFile.js",
+      "ReadDirectory": "components/directory_reader.js",
       "tweets_date_filter": "components/tweets_date_filter.coffee",
       "tweets_get_hashTags": "components/tweets_get_hashTags.coffee",
+	  "tweets_filter_followers": "components/tweets_filter_followers.coffee",
+      "tweets_filter_friends": "components/tweets_filter_friends.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
