@@ -22,13 +22,13 @@ exports.getComponent = function () {
           for(var i = 0; i < allText.length; i++) {
             c.outPorts.out.send(allText[i]);
           }
-		  c.outPorts.out.disconnect();
+          c.outPorts.out.disconnect();
         }
       }
       xmlhttp.open("GET",file,true);
       xmlhttp.send();
     }
-	readDirectory("directory_reader.php")
+    readDirectory("directory_reader.php")
     // Do something with the packet, then
   });
   c.outPorts.add('out');
