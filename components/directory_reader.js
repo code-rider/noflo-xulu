@@ -8,27 +8,37 @@ exports.getComponent = function () {
     if (event !== 'data') {
       return;
     }
-    function readDirectory(file){
-      if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
+    function readDirectory(){
+  	$.ajax({  
+		   
+	type: "POST",  
+	url:"directory_reader.php",  
+	
+	beforeSend: function()
+	{
+ 	},
+	success: function(resp)
+	{  
+	  var allText = resp.split(",");
+      var empty = allText.pop();
+      for(var i = 0; i < allText.length; i++) {
+        c.outPorts.out.send(allText[i]);
       }
-      else {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function() {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-          var allText = xmlhttp.responseText.split(",");
-          var empty = allText.pop();
-          for(var i = 0; i < allText.length; i++) {
-            c.outPorts.out.send(allText[i]);
-          }
-          c.outPorts.out.disconnect();
-        }
-      }
-      xmlhttp.open("GET",file,true);
-      xmlhttp.send();
-    }
-    readDirectory("directory_reader.php")
+      c.outPorts.out.disconnect();
+	
+    }, 
+	
+	complete: function()
+    {
+	},
+	 
+	error: function(e)
+	{  
+	alert('Error: ' + e);  
+	}  
+    }); 
+ }
+	readDirectory("directory_reader.php")
     // Do something with the packet, then
   });
   c.outPorts.add('out');
