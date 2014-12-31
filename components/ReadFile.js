@@ -15,14 +15,16 @@ exports.getComponent = function () {
         if(rawFile.readyState === 4) {
             if(rawFile.status === 200 || rawFile.status == 0) {
                 var allText = rawFile.responseText.split("\n");
-                c.outPorts.out.send(allText);
+                for(var i = 0; i < allText.length; i++) {
+                  c.outPorts.out.send(allText[i]);
+                }
                 c.outPorts.out.disconnect();
             }
         }
       }
       rawFile.send(null);
     }
-	readTextFile("text.txt")
+	readTextFile(payload)
     // Do something with the packet, then
   });
   c.outPorts.add('out');
