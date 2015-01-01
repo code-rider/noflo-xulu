@@ -8,26 +8,24 @@ exports.getComponent = function () {
     if (event == 'disconnect') {
       c.outPorts.out.disconnect();
     }
-	if (event == 'data') {
-	function readTextFile(file){	  
-      var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", file, false);
-      rawFile.onreadystatechange = function () {
-        if(rawFile.readyState === 4) {
-          if(rawFile.status === 200 || rawFile.status == 0) {
-            var allText = rawFile.responseText.split("\n");
-            for(var i = 0; i < allText.length; i++) {
-              if(allText[i].length > 0){
-                  c.outPorts.out.send(allText[i]);
-                }
+    if (event == 'data') {
+	  function readTextFile(file){	  
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+          if(rawFile.readyState === 4) {
+            if(rawFile.status === 200 || rawFile.status == 0) {
+              var allText = rawFile.responseText.split("\n");
+              for(var i = 0; i < allText.length; i++) {
+                c.outPorts.out.send(allText[i]);
+              }
             }
-            c.outPorts.out.disconnect();
           }
         }
+        rawFile.send(null);
       }
-      rawFile.send(null);
+	  readTextFile("filePathList.txt");
     }
-	readTextFile("filePathList.txt")
     // Do something with the packet, then
   });
   c.outPorts.add('out');

@@ -8,8 +8,8 @@ exports.getComponent = function () {
     if (event == 'disconnect') {
       c.outPorts.out.disconnect();
     }
-	if (event == 'data') {
-	  function readTextFile(file){	  
+    if (event == 'data') {
+      function readTextFile(file){	  
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
         rawFile.onreadystatechange = function () {
