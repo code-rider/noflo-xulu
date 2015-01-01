@@ -17,7 +17,9 @@ exports.getComponent = function () {
             if(rawFile.status === 200 || rawFile.status == 0) {
               var allText = rawFile.responseText.split("\n");
               for(var i = 0; i < allText.length; i++) {
-                c.outPorts.out.send(allText[i]);
+                if(allText[i].length > 0){
+                  c.outPorts.out.send(allText[i]);
+                }
               }
             }
           }

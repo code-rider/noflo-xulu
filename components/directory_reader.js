@@ -5,9 +5,10 @@ exports.getComponent = function () {
    var c = new noflo.Component();
 
   c.inPorts.add('in', function (event, payload) {
-    if (event !== 'data') {
-      return;
+    if (event == 'disconnect') {
+      c.outPorts.out.disconnect();
     }
+	if (event == 'data') {
 	function readTextFile(file){	  
       var rawFile = new XMLHttpRequest();
       rawFile.open("GET", file, false);
@@ -16,7 +17,9 @@ exports.getComponent = function () {
           if(rawFile.status === 200 || rawFile.status == 0) {
             var allText = rawFile.responseText.split("\n");
             for(var i = 0; i < allText.length; i++) {
-              c.outPorts.out.send(allText[i]);
+              if(allText[i].length > 0){
+                  c.outPorts.out.send(allText[i]);
+                }
             }
             c.outPorts.out.disconnect();
           }
