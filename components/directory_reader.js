@@ -5,10 +5,10 @@ exports.getComponent = function () {
    var c = new noflo.Component();
 
   c.inPorts.add('in', function (event, payload) {
-    if (event == 'disconnect') {
+    if (event === 'disconnect') {
       c.outPorts.out.disconnect();
     }
-    if (event == 'data') {
+    if (event === 'data') {
 	  function readTextFile(file){	  
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
