@@ -21,6 +21,7 @@
     "components/tweets_get_hashTags.coffee",
     "components/tweets_filter_followers.coffee",
     "components/tweets_filter_friends.coffee",
+    "components/appendChild.coffee",
     "index.js"
   ],
   "json": [
@@ -38,6 +39,7 @@
       "tweets_get_hashTags": "components/tweets_get_hashTags.coffee",
       "tweets_filter_followers": "components/tweets_filter_followers.coffee",
       "tweets_filter_friends": "components/tweets_filter_friends.coffee",
+      "appendChild": "components/appendChild.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
