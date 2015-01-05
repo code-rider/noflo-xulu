@@ -9,23 +9,34 @@ class AppendChild extends noflo.Component
     @parentElementid = null
     @childElementName = null
     
-    @inPorts =
-      childString: new noflo.Port 'string'
-      parentElementid: new noflo.Port 'string'
-      childElementName: new noflo.Port 'string'
+    @inPorts = new noflo.InPorts
+      child_string:
+        datatype: 'string'
+        description: 'string to append'
+      parent_element_id: 
+        datatype: 'string'
+        description: 'parrent id to append'
+      child_element_name:
+        datatype: 'string'
+        description: 'children element name wants to create as child'
     @outPorts = {}
 
-    @inPorts.parentElementid.on 'data', (@parentElementid) =>
+    @inPorts.parent_element_id.on 'data', (@parentElementid) =>
       do @append if @childElementName
     
-    @inPorts.childElementName.on 'data', (@childElementName) =>
+    @inPorts.child_element_name.on 'data', (@childElementName) =>
       do @append if @parentElementid
     
-    @inPorts.childString.on 'begingroup', (group) =>
+    @inPorts.child_string.on 'begingroup', (group) =>
       @groups.push(group)
 
-    @inPorts.childString.on 'data', (data) =>
-      @children.push data
+    @inPorts.child_string.on 'data', (data) =>
+      unless @parentElementid and @childElementName
+        @children.push data
+        return
+      child_ele = document.createElement @childElementName
+      child_ele.innerHTML = data
+      document.getElementById(@parentElementid).appendChild child_ele
     
     
   append: ->

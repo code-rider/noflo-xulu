@@ -16,7 +16,8 @@ class tweets_filter_followers extends noflo.Component
         description: 'followers_count used to filter data by followers_count'
       greaterthen:
         datatype: 'boolean'
-        description: 'if true send to outport where followers_count is greaterthen followers_count inport else out lessthen value'
+        description: 'if true send to outport where followers_count is greaterthen followers_count inport 
+		else where followers_count is lessthen followers_count inport'
       in:
         datatype: 'string'
         description: 'Tweet json in string format for filtring'
@@ -35,7 +36,7 @@ class tweets_filter_followers extends noflo.Component
     @inPorts.in.on 'data', (data) =>
       @tweets.push data
 	
-    @inPorts.followers_count.on 'disconnect', (data) =>
+    @inPorts.in.on 'disconnect', (data) =>
       @outPorts.out.disconnect()
 
   filter: ->

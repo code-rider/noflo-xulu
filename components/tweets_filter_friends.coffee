@@ -35,6 +35,9 @@ class tweets_filter_friends extends noflo.Component
       @groups.push(group)
     @inPorts.in.on 'data', (data) =>
       @tweets.push data
+	  
+    @inPorts.in.on 'disconnect', (data) =>
+      @outPorts.out.disconnect()
 
   filter: ->
     return @outPorts.out.disconnect() if @tweets.length is 0
