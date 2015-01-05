@@ -41,7 +41,7 @@
       "tweets_filter_followers": "components/tweets_filter_followers.coffee",
       "tweets_filter_friends": "components/tweets_filter_friends.coffee",
       "appendChild": "components/appendChild.coffee",
-      "appendChild": "components/tweet_by_screen_name.coffee",
+      "tweet_by_screen_name": "components/tweet_by_screen_name.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
