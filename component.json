@@ -22,6 +22,7 @@
     "components/tweets_filter_followers.coffee",
     "components/tweets_filter_friends.coffee",
     "components/appendChild.coffee",
+    "components/tweet_by_screen_name.coffee",
     "index.js"
   ],
   "json": [
@@ -40,6 +41,7 @@
       "tweets_filter_followers": "components/tweets_filter_followers.coffee",
       "tweets_filter_friends": "components/tweets_filter_friends.coffee",
       "appendChild": "components/appendChild.coffee",
+      "appendChild": "components/tweet_by_screen_name.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
