@@ -8,11 +8,15 @@ class tweets_filter_followers extends noflo.Component
     @followers_count = null
     @tweets = []
     @groups = []
+    @greaterThen = null
 
     @inPorts = new noflo.InPorts
       followers_count:
         datatype: 'int'
         description: 'followers_count used to filter data by followers_count'
+      greaterthen:
+        datatype: 'boolean'
+        description: 'if true send to outport where followers_count is greaterthen followers_count inport else out lessthen value'
       in:
         datatype: 'string'
         description: 'Tweet json in string format for filtring'
@@ -22,6 +26,8 @@ class tweets_filter_followers extends noflo.Component
         description: 'send filtered data by user id'
 
     @inPorts.followers_count.on 'data', (@followers_count) =>
+      do @filter if @greaterThen
+    @inPorts.greaterthen.on 'data', (@greaterThen) =>
       do @filter if @followers_count
 
     @inPorts.in.on 'begingroup', (group) =>
@@ -35,9 +41,13 @@ class tweets_filter_followers extends noflo.Component
   filter: ->
     @tweets.forEach (tweet) =>
       tweetObj = JSON.parse tweet
-      @outPorts.out.send tweet if tweetObj.user.followers_count >= @followers_count
+      if @greaterThen is true
+        @outPorts.out.send tweet if tweetObj.user.followers_count >= @followers_count
+      if @greaterThen is false
+        @outPorts.out.send tweet if tweetObj.user.followers_count <= @followers_count
     @outPorts.out.disconnect()
     @followers_count = null
+    @greaterThen = yes
     @tweets = []
     @groups = []
 
