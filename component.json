@@ -24,6 +24,7 @@
     "components/appendChild.coffee",
     "components/tweet_by_screen_name.coffee",
     "components/tweets_get_tweetText.coffee",
+    "components/tweets_get_screenNames.coffee",
     "index.js"
   ],
   "json": [
@@ -44,6 +45,7 @@
       "appendChild": "components/appendChild.coffee",
       "tweet_by_screen_name": "components/tweet_by_screen_name.coffee",
       "tweets_get_tweetText": "components/tweets_get_tweetText.coffee",
+      "tweets_get_screenNames": "components/tweets_get_screenNames.coffee",
       "tweets_uid_filter": "components/tweets_uid_filter.coffee"
     }
   }
