@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweets_get_hashTags extends noflo.Component
   description: 'The tweets_get_hashTags component receives a tweet string in the in port,
     and collect all hash tags from receiving data and send all uniqe tags one by one to the out port'
+  icon: 'tags'
 
   constructor: ->
     @tweets = []

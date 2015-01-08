@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweets_filter_friends extends noflo.Component
   description: 'The tweets_filter_friends component receives a tweet string in the in port,
     and check it by friends_count and send a tweet to the out port if check is true'
+  icon: 'filter'
 
   constructor: ->
     @friends_count = null

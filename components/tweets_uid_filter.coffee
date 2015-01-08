@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweet_by_user_id extends noflo.Component
   description: 'The tweet_by_user_id component receives a tweet string in the in port,
     and check it by user id and send a tweet to the out port if check is true'
+  icon: 'user'
 
   constructor: ->
     @user_id = null

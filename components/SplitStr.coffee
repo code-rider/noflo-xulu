@@ -4,6 +4,7 @@ class SplitStr extends noflo.Component
   description: ' The SplitStr component receives a string in the in port,
     splits it by string specified in the delimiter port, and send each part as
     a separate packet to the out port'
+  icon:'font'
 
   constructor: ->
     @delimiterString = "\n"

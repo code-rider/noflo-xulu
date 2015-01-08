@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweets_get_tweetText extends noflo.Component
   description: 'The tweets_get_tweetText component receives a tweet string in the in port,
     and send tweet text to the out port'
+  icon: 'envelope'
 
   constructor: ->
     @tweets = []

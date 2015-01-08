@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class PacketCounter extends noflo.Component
   description: ' The PacketCounter component receives a data in the in port,
     in diffrent packets and count them and send total count to out port'
+  icon: 'sort-numeric-asc'
 
   constructor: ->
     @packets = []

@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweets_get_screenNames extends noflo.Component
   description: 'The tweets_get_screenNames component receives a tweet string in the in port,
     and send only unique screen names to the out port'
+  icon: 'user'
 
   constructor: ->
     @tweets = []

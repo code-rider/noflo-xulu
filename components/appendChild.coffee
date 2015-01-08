@@ -2,6 +2,7 @@ noflo = require 'noflo'
 
 class AppendChild extends noflo.Component
   description: 'Append elements as children of a parent element'
+  icon: 'html5'
   constructor: ->
     @parent = null
     @children = []

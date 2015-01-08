@@ -3,6 +3,7 @@ noflo = require 'noflo'
 class tweet_date_filter extends noflo.Component
   description: 'The tweet_date_filter component receives a tweet string in the in port,
     and send filtered tweets to the out port by date range'
+  icon: 'filter'
 
   constructor: ->
     @start_date = null
